@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('git clone') {
             agent {
-  label 'label2'
+  label 'master'
 }
         steps {
         git(
@@ -13,7 +13,7 @@ pipeline {
               }
         stage ('Build with maven') {
             agent {
-  label 'label2'
+  label 'master'
 }
             steps {
                 sh '''
