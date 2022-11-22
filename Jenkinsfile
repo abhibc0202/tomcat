@@ -1,8 +1,7 @@
 pipeline {
-    agent any;
+    agent any
     stages {
         stage ('git clone') {
-            stage ('BUILD') {
         steps {
         git(
         credentialsId: 'git-hub', url: 'https://github.com/abhibc0202/java1.git'
@@ -10,7 +9,6 @@ pipeline {
         }
               }
         stage ('Build with maven') {
-            stage ('BUILD') {
             steps {
                 sh '''
                 mvn clean package
@@ -24,5 +22,6 @@ pipeline {
                     }
                 }
             }
-   }
+        
+    }
 }
