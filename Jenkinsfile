@@ -1,5 +1,5 @@
 pipeline {
-    agent any 
+    agent any
     stages {
         stage ('git clone') {
         steps {
@@ -20,7 +20,7 @@ pipeline {
                     script{
                     deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://54.87.128.232:8090/')], contextPath: null, war: '**/*.war'
                     }
-                } 
+                }
             }
-    }
+   }
 }
