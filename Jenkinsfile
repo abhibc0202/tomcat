@@ -25,6 +25,7 @@ stage ('Build with maven') {
                     echo "Archiving the artifacts"
                     archiveArtifacts artifacts: '**/target/*.war', followSymlinks: false
             }
+    }
 }
     stage ('deploy') {
        agent {
