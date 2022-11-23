@@ -20,12 +20,6 @@ stage ('Build with maven') {
                 mvn clean package
                 '''
             }
-    post {
-                    success{
-                    echo "Archiving the artifacts"
-                    archiveArtifacts artifacts: '**/target/*.war', followSymlinks: false
-            }
-    }
 }
     stage ('deploy') {
        agent {
