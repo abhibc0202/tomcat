@@ -7,7 +7,7 @@ pipeline {
 }
         steps {
             git(
-            credentialsId: 'git-hub', url: 'https://github.com/abhibc0202/javapvt.git'
+            credentialsId: 'git-hub', url: 'https://github.com/abhibc0202/hello-world.git'
             )
         }
     }
