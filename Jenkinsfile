@@ -21,9 +21,7 @@ pipeline{
                 post{
                     success{
                         deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://54.88.150.118:8080')], contextPath: null, war: '**/*.war'
-
                     }
                 }
             }
-    }
 }
